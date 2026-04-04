@@ -25,7 +25,7 @@ This website was created to display CSS art creations and provide helpful resour
 
 ## Target Audience
 This website is designed for **middle school through college students** who:
-- Are interest in web design.
+- Are interested in web design.
 - Want to learn/try something new.
 - Enjoy working with interactive projects.
 - Searching for different ways to strengthen their webpages.
