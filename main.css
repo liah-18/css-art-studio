@@ -25,14 +25,15 @@ header {
   justify-content: space-between;
   padding: 20px;
   border-bottom: 2px solid #ddd;
-  position: relative;
   background: #f3e8ff;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .logo h1 {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 36px;
-  line-height: 1.1;
   color: white;
   text-shadow: -2px 2px 0px lightskyblue;
 }
@@ -41,6 +42,10 @@ header {
   width: 75px;
   height: 75px;
   border-radius: 50%;
+}
+
+.desktop-nav {
+  display: flex;
 }
 
 .desktop-nav a {
@@ -52,21 +57,18 @@ header {
   text-decoration: none;
   color: black;
   font-size: 20px;
+  transition: 0.2s;
 }
 
 .desktop-nav a:hover {
   background: #ffe4f1;
 }
 
-.desktop-nav {
-  display: flex;
-}
-
 .hamburger {
   display: none;
+  font-size: 34px;
   background: none;
   border: none;
-  font-size: 34px;
   cursor: pointer;
 }
 
@@ -81,9 +83,11 @@ header {
   transition: 0.3s ease;
   display: flex;
   flex-direction: column;
+  border-right: 3px solid #d6b3ff;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.15);
 }
 
-.mobile menu a {
+.mobile-menu a {
   text-decoration: none;
   color: black;
   font-size: 24px;
@@ -126,6 +130,9 @@ header {
   width: 200px;
   height: auto;
   border: 3px double rgb(249, 221, 225);
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .featured-label {
@@ -142,10 +149,13 @@ header {
   gap: 15px;
 }
 
-.editor-box, .preview-box {
+.editor-box,
+.preview-box {
   border: 2px solid #fcf5d2;
   padding: 10px;
   background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .preview-box {
@@ -171,21 +181,54 @@ textarea {
 
 .buttons {
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.action-btn {
+.buttons a {
+  display: inline-block;
   font-size: 26px;
   padding: 10px 24px;
-  margin: 10px;
+  margin: 40px 10px;
   border: 2px solid #bde0ff;
   background: #ffffff;
   cursor: pointer;
   border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.2s;
 }
 
-.secondary {
-  background: #e9ddff;
+.buttons a:hover {
+  background: #ffe4f2;
+  transform: translateY(-3px);
+}
+
+.buttons a.secondary {
+  background: #ead6ff;
+}
+
+.stair-words {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  margin: 60px 0;
+  line-height: 1.4;
+  font-family: 'Comic Sans MS', 'Patrick Hand', cursive;
+}
+
+.stair-words span:nth-child(1) {
+  margin-left: 150px;
+  color: rgba(135, 217, 245, 0.729);
+}
+
+.stair-words span:nth-child(3) {
+  margin-left: 350px;
+  color: rgb(210, 210, 251);
+}
+
+.stair-words span:nth-child(5) {
+  margin-left: 540px;
+  color: rgba(255, 182, 193, 0.75);
 }
 
 footer {
@@ -195,6 +238,8 @@ footer {
   margin-top: 20px;
   font-size: 20px;
   background: #eafff1;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 768px) {
@@ -216,7 +261,7 @@ footer {
   }
 
   .carousel img {
-    width: 50px;
+    width: 100px;
   }
 
   .logo h1 {
@@ -227,34 +272,4 @@ footer {
     grid-column: span 1;
     width: 100%;
   }
-
-}
-
-.editor-box, .preview-box, header, .carousel img {
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  border-radius: 12px;
-}
-
-.stair-words {
-  font-size: 32px;
-  font-weight: bold;
-  text-align: left;
-  margin: 60px 0;
-  line-height: 1.4;
-  font-family: 'Comic Sans Ms', 'Patrick Hand', cursive;
-}
-
-.stair-words span:nth-child(1) {
-  margin-left: 150px;
-  color: rgba(135, 217, 245, 0.729);
-}
-
-.stair-words span:nth-child(5) {
-  margin-left: 540px;
-  color: rgba(255, 182, 193, 0.75);
-}
-
-.stair-words span:nth-child(3) {
-  margin-left: 350px;
-  color: rgb(210, 210, 251);
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create | Lia's CSS Art Studio</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+    <div class="logo">
+        <h1>Lia's<br>CSS Art<br>Studio</h1>
+    </div>
+
+    <div class="profile">
+        <img src="images/sunshine.png" alt="Profile">
+    </div>
+
+    <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="create.html">Create</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <button id="hamburger" class="hamburger">☰</button>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+    <button id="closeMenu" class="close-btn">✕</button>
+    <a href="index.html">Home</a>
+    <a href="create.html">Create</a>
+    <a href="tips.html">Tips</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+</div>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="close-btn">✕</button>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <main>
+        <h2 class="welcome">* CREATE YOUR ART *</h2>
+
+        <section style="width:85%; margin:0 auto; text-align:center;">
+            <p>Write your HTML & CSS below and preview your artwork!</p>
+        </section>
+
+        <section class="editor-area">
+            <div class="editor-box">
+                <h3>HTML</h3>
+                <textarea placeholder="<div class='circle'></div>"></textarea>
+            </div>
+
+            <div class="editor-box">
+                <h3>CSS</h3>
+                <textarea placeholder=".circle { width:100px; height:100px; border-radius:50%; background:red; }"></textarea>
+            </div>
+
+            <div class="preview-box">
+                <h3>PREVIEW</h3>
+                <div class="preview-window"></div>
+            </div>
+        </section>
+
+        <div style="text-align:center; margin-top:20px;">
+            <button class="action-btn">RUN CODE</button>
+        </div>
+
+    </main>
+
+    <footer>© 2026 CSS ART STUDIO | Lia Head</footer>
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>

@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tips | Lia's CSS Art Studio</title>
+    <title>Gallery | Lia's CSS Art Studio</title>
     <link rel="stylesheet" href="main.css" />
+    <style>
+        .gallery-grid {
+            width:85%;
+            margin:20px auto;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap:15px;
+        }
+
+        .gallery-grid img {
+            width:100%;
+            border:3px dashed black;
+            background:white;
+        }
+    </style>
 </head>
 <body>
 <div class="page-wrapper">
@@ -34,29 +49,20 @@
     <a href="create.html">Create</a>
     <a href="tips.html">Tips</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-</div>
-
-<div id="mobileMenu" class="mobile-menu">
-    <button id="closeMenu" class="close-btn">✕</button>
-    <a href="index.html">Home</a>
-    <a href="create.html">Create</a>
-    <a href="tips.html">Tips</a>
-    <a href="about.html">About</a>
 </div>
 
 <main>
-    <h2 class="welcome">* CSS ART TIPS *</h2>
+    <h2 class="welcome">* GALLERY *</h2>
 
-    <section style="width:80%; margin:0 auto; font-size:24px;">
-        <p>• Use <b>border-radius</b> for circles & rounded shapes</p>
-        <p>• Use <b>transform: rotate()</b> to angle pieces</p>
-        <p>• Add depth using <b>box-shadow</b> and <b>gradients</b></p>
-        <p>• Keep shapes grouped using <b>div containers</b></p>
-        <p>• Experiment with <b>position: absolute</b></p>
-        <p>• Try <b>clip-path</b> to make creative shapes</p>
-        <p>• Animations? Try <b>@keyframes</b>!</p>
-    </section>
+    <div class="gallery-grid">
+        <img src="https://placehold.co/300x200">
+        <img src="https://placehold.co/300x200/ffaa99">
+        <img src="https://placehold.co/300x200/99ddff">
+        <img src="https://placehold.co/300x200/f7f7a1">
+        <img src="https://placehold.co/300x200/d4c0ff">
+        <img src="https://placehold.co/300x200/ffcc66">
+    </div>
+
 </main>
 
 <footer>© 2026 CSS ART STUDIO | Lia Head</footer>
