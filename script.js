@@ -22,16 +22,17 @@ const images = [
 
 let currentIndex = 0;
 
+const imageElement = document.getElementById("carouselImage");
+
 document.getElementById("prevBtn").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + imagess.length) % images.length;
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  imageElement.src = images[currentIndex];
 });
 
 document.getElementById("nextBtn").addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById("carouselImage").src = images[currentIndex];
+  imageElement.src = images[currentIndex];
 });
 
-document.getElementById("carouselImage").src = images[0];
-
-const imageElement = document.getElementById("carouselImage");
+imageElement.src = images[0];
 
