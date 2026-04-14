@@ -11,12 +11,16 @@ h1, h2, h3, p {
 .page-wrapper {
   width: 90%;
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 60px;
   padding: 25px;
   background: white;
   border: 6px solid #dedede;
   border-radius: 24px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-page p {
+  text-align: center;
 }
 
 header {
@@ -36,6 +40,9 @@ header {
   font-size: 36px;
   color: white;
   text-shadow: -2px 2px 0px lightskyblue;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .profile img {
@@ -75,30 +82,45 @@ header {
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: -270px;
-  width: 250px;
-  height: 100%;
-  background: white;
-  padding: 20px;
+  right: 0;
+  width: 20%;
+  height: 100;
+  transform: translateX(100%);
   transition: 0.3s ease;
+  z-index: 99;
+  background: #ead6ffdc;
+  padding: 40px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  border-right: 3px solid #d6b3ff;
-  box-shadow: 4px 0 10px rgba(0,0,0,0.15);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
 }
 
 .mobile-menu a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin: 10px 0;
+  transition: 0.2s ease;
+}
+
+.mobile-menu a:hover {
+  color: lightskyblue;
+  transform: translateX(5px);
 }
 
 .close-btn {
-  background: none;
+  background: rgba(233, 197, 248, 0.7);
   border: none;
-  font-size: 30px;
-  margin-left: auto;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px 10px;
+  align-self: flex-end;
+  margin-bottom: 15px;
 }
 
 .welcome {
@@ -272,4 +294,44 @@ footer {
     grid-column: span 1;
     width: 100%;
   }
+
+  .tips-layout {
+    flex-direction: column;
+  }
+
+}
+
+.tips-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.tips-text {
+  flex: 1;
+}
+
+.tips-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px lightskyblue;
+}
+
+.about-image img:hover {
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
 }

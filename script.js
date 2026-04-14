@@ -1,15 +1,16 @@
 /* MOBILE MENU */
-const menu = document.getElementById("mobileMenu");
-const hamburger = document.getElementById("hamburger");
-const closeMenu = document.getElementById("closeMenu");
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('mobileMenu');
+const closeBtn = document.getElementById('closeMenu');
 
-hamburger.addEventListener("click", () => {
-  menu.style.left = "0px"
+hamburger.addEventListener('click', () => {
+  menu.classList.add('active');
 });
 
-closeMenu.addEventListener("click", () => {
-  menu.style.left = "-270px";
+closeBtn.addEventListener('click', () => {
+  menu.classList.remove('active');
 });
+
 
 /* IMAGE CAROUSEL */
 const images = [
