@@ -180,10 +180,11 @@ header {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.preview-box {
-  grid-column: span 2;
+.preview-box iframe {
+  flex: 1;
   justify-self: center;
-  width: 60%;
+  width: 100%;
+  border: none;
 }
 
 textarea {
@@ -196,9 +197,11 @@ textarea {
 }
 
 .preview-window {
-  height: 140px;
+  height: 100px;
+  width: 94%;
   background: #f8f8f8;
-  border: 1px dashed #666;
+  border: none;
+  box-sizing: border-box;
 }
 
 .buttons {
