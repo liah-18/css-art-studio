@@ -302,6 +302,14 @@ footer {
     flex-direction: column;
   }
 
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stair-words {
+    display: none;
+  }
+
 }
 
 .tips-layout {
@@ -355,4 +363,20 @@ footer {
   border: 2px dashed #ccc;
   border-radius: 8px;
   background: #fafafa;
+}
+
+gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.gallery-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
 }
