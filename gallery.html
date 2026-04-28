@@ -6,19 +6,33 @@
     <title>Gallery | Lia's CSS Art Studio</title>
     <link rel="stylesheet" href="main.css" />
     <style>
-        .gallery-grid {
-            width:85%;
-            margin:20px auto;
-            display:grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap:15px;
-        }
+      .gallery-grid {
+    width: 85%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* ALWAYS 3 columns */
+    gap: 15px;
+}
 
-        .gallery-grid img {
-            width:100%;
-            border:3px dashed black;
-            background:white;
-        }
+.gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 3px dashed black;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
     </style>
 </head>
 <body>
@@ -58,7 +72,7 @@
     <div class="gallery-grid">
         <img src="images/bike.PNG">
         <img src="images/building.WEBP">
-        <img src="images/catus.PNG">
+        <img src="images/cactus.PNG">
         <img src="images/dory.PNG">
         <img src="images/drink.PNG">
         <img src="images/koala.JPG">
@@ -66,7 +80,7 @@
 
 </main>
 
-<footer>© 2026 CSS ART STUDIO | Lia Head</footer>
+<footer>© 2026 CSS ART STUDIO | Lia Hood</footer>
 
 <script src="script.js"></script>
 </div>

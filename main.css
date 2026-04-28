@@ -11,7 +11,7 @@ h1, h2, h3, p {
 .page-wrapper {
   width: 90%;
   max-width: 1000px;
-  margin: 60px;
+  margin: 60px auto;
   padding: 25px;
   background: white;
   border: 6px solid #dedede;
@@ -71,7 +71,7 @@ header {
   background: #ffe4f1;
 }
 
-.hamburger {
+.hamburger-icon {
   display: none;
   font-size: 34px;
   background: none;
@@ -84,7 +84,6 @@ header {
   top: 0;
   right: 0;
   width: 20%;
-  height: 100;
   transform: translateX(100%);
   transition: 0.3s ease;
   z-index: 99;
@@ -169,6 +168,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  align-items: stretch;
 }
 
 .editor-box,
@@ -178,27 +178,25 @@ header {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.preview-box iframe {
-  flex: 1;
-  justify-self: center;
-  width: 100%;
-  border: none;
+  height: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 textarea {
-  width: 94%;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   border: none;
   background: #f4f3f3;
   padding: 10px;
-  resize: vertical;
+  resize: none;
+  box-sizing: border-box;
 }
 
-.preview-window {
-  height: 100px;
-  width: 94%;
+.preview-window, .preview-box iframe {
+  height: 280px;
+  width: 100%;
   background: #f8f8f8;
   border: none;
   box-sizing: border-box;
@@ -273,11 +271,11 @@ footer {
     display: none;
   }
 
-  .hamburger {
+  .hamburger-icon {
     display: block;
   }
 
-  header {
+  .header {
     justify-content: space-between;
   }
 
@@ -349,7 +347,7 @@ footer {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 90%;
   max-width: 900px;
@@ -358,14 +356,14 @@ footer {
 
 .gallery-grid img {
   width: 100%;
-  height: 180px;       /* forces equal height */
-  object-fit: cover;   /* crops nicely without distortion */
+  height: 180px;
+  object-fit: cover;
   border: 2px dashed #ccc;
   border-radius: 8px;
   background: #fafafa;
 }
 
-gallery-container {
+.gallery-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -379,4 +377,4 @@ gallery-container {
   object-fit: cover;
   border: 2px dashed #ccc;
   border-radius: 8px;
-}
+} 
